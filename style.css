@@ -8,10 +8,6 @@ fast parts
     font-size: 40px;
     color: #FFFFFF;;
 }
-.half-width a:hover{
-    background-color: darkcyan;
-    color: red;
-}
 .top-part{
     display: flex;
    background-color: darkblue;
@@ -20,6 +16,7 @@ fast parts
    padding-left: 126px;
 }
 .top-part .half-width img{
+    width: 100%;
     padding-left: 156px;
 }
 .link-button{
@@ -32,6 +29,21 @@ fast parts
 }
 .link-button i{
     padding-left: 10px;
+}
+/* animation part */
+@keyframes sliding {
+    from{
+        background-color: magenta;
+    }
+    to{
+        background-color: mediumspringgreen;
+    }
+}
+.half-width a:hover{
+    background-color: darkcyan;
+    color: red;
+    animation: sliding 1s ease-in-out 0.5 infinit alterner fill-mode;
+    animation-play-state: running;
 }
 /* ----------------
 section blogs 
@@ -63,6 +75,21 @@ section blogs
     box-shadow: 10px 20px 40px grey;
     border-radius: 10px;
 }
+/* bonus part  */
+.bonus-part{
+        display: flex;
+       background-color: darkcyan;
+       align-items: center;
+       height: 485px;
+       padding-left: 126px;
+}
+.bonus-link{
+    text-decoration: none;
+    background-color: 
+    #E02C6D;
+    padding: 10px 40px;
+    color: white;
+}
 
 /* ----- 
 footer part
@@ -72,7 +99,16 @@ footer{
     flex-direction: column;
     align-items: center;
 }
-/* .social-icon img{
-    font-size: 5px;
-    padding: 5px;
-} */
+/* footere end */
+
+/* -------------
+media quary
+------------- */
+/* mobile divice */
+@media only screen and(max-width:688px) {
+    .half-width{
+        display: flex wrap;
+        background-color: blueviolet;
+      grid-template-columns: repeat(1, 1fr);
+    }
+}
