@@ -82,6 +82,7 @@ section blogs
        align-items: center;
        height: 485px;
        padding-left: 126px;
+       margin-bottom: 100px;
 }
 .bonus-link{
     text-decoration: none;
@@ -90,7 +91,6 @@ section blogs
     padding: 10px 40px;
     color: white;
 }
-
 /* ----- 
 footer part
 ---  */
@@ -105,10 +105,24 @@ footer{
 media quary
 ------------- */
 /* mobile divice */
-@media only screen and(max-width:688px) {
-    .half-width{
-        display: flex wrap;
-        background-color: blueviolet;
-      grid-template-columns: repeat(1, 1fr);
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+.blogs{
+    grid-template-columns: repeat(1, 1fr);
+}
+.blogs{
+    flex-direction: column;
+}
+}
+/* tab phone */
+
+@media only screen and (min-width: :688px;) and (max-width: 992px;) {
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blogs{
+        flex-direction: column;
     }
 }
